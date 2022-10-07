@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap');
+:root{
+    --yellow:#FFDE00;
+    --red:#D2001A;
+    --white:#FFFAE7;
+    --light-color:#EFEFEF;
+    --blue:#130f40;
+    --border:2px solid rgba(0,0,0,.1);
+    --box-shadow:5px 5px rgba(0,0,0,.1);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.header{
+    width: 100vw;
+    height: 2rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 9%;
+    text-transform: uppercase;
+    background-color: var(--yellow);
+}
+.header .logo{
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--blue);
+}
+.header .logo span{
+    color: var(--red);
+}
+.header .navbar{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header .navbar a{
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 0 1rem;
+    color: var(--blue);  
+}
+.header .navbar a:hover{
+    color: var(--red);
+}
+.btn{
+    font-weight: 500;
+    font-size: 1.25rem;
+    background-color: var(--red);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--blue);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--blue);
+    color: var(--red);
+}
+#login-btn i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    margin-top: 0;
+    display: none;
+}
+#menu-btn{
+    font-size: 2.5rem;
+    color: var(--blue);
+    cursor: pointer;
+    display: none;
+    font-weight: 600;
+}
+.login-form-container{
+    position: fixed;
+    top: 105%;
+    left: 0;
+    height: 100%;
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+}
+.login-form-container.active{
+    top: 0;
+    opacity: 1;
+}
+.login-form-container form {
+    background-color: #FFF;
+    box-shadow:var(--box-shadow);
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    width: 40rem;
+    text-align: center;
+}
+.login-form-container form .button{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.login-form-container form .btn{
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+}
+.login-form-container form h1{
+    color: var(--blue);
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.login-form-container form .box{
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--blue);
+    padding: 1rem 1.25rem;
+    border: var(--border);
+}
+.login-form-container form p{
+    padding: 1.5rem 0;
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+.login-form-container form p a{
+    color: var(--yellow);
+    text-decoration: underline;
+
+}
+.login-form-container #close-login-form{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+.home{
+    margin-top: 10rem;
+    padding :2.5rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+   
+}
+.home .home-text h1{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+.home .home-img{
+    width: 50%;
+}
+.home h1{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header .navbar .active{
+    top: 0;
+    background-color: var(--red);
+    opacity: 1;
+}
+/* media queries */
+@media(max-width:1200px){
+    .header{
+        padding: 2rem;
+    }
+}
+@media(max-width:998px){
+    .header .navbar{
+        flex-direction: column;
+        position: absolute;
+        top: 105%;
+        left: 0;
+        right: 0;
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;    
+    }
+    #menu-btn{
+        display: block;
+    }
+}
